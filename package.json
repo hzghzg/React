@@ -18,7 +18,7 @@
     "url": "https://github.com/hzghzg/React/issues"
   },
   "homepage": "https://github.com/hzghzg/React#readme",
-  "dependencies": {
+  "devDependencies": {
     "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
