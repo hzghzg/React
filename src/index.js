@@ -10,11 +10,18 @@ import ReactDom from 'react-dom'//把创建好的组件和虚拟dom放到页面�
 //参数3..n:子节点
 // const myh1 = React.createElement('h1', { id: 'myh1', title: '这是一个标题' }, 'Hello React element!')
 
-
-//使用JSX创建元素，需要安装babel来转换，本事上还是被转换成react.createElement  
-const myh1=<h1 id='myh1' title='这是一个标题'>Hello React element </h1>
+const arr = [<h5>数组元素1</h5>, <h5>数组元素2</h5>, <h5>数组元素3</h5>]
+const arr1 = ['普通数组元素1', '普通数组元素2', '普通数组元素3']
+//s.createElement  
+const myh1 = <h1 id='myh1' title='这是一个标题'>Hello React element </h1>
+const mydiv = <div>
+    {/* {arr} */}
+    {arr1.map(item=><h5 key={item}>{item}</h5>)}
+    <br />
+    {myh1}
+</div>
 
 //使用ReactDom把虚拟dom渲染到页面上  
 //参数1：要渲染的那个虚拟dom元素  
 //参数2：指定页面上一个容器
-ReactDom.render(myh1, document.getElementById('app'))
+ReactDom.render(mydiv, document.getElementById('app'))
