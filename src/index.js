@@ -2,6 +2,7 @@
 import React from 'react'//创建组件、虚拟dom元素
 import ReactDom from 'react-dom'//把创建好的组件和虚拟dom放到页面上展示
 import Hello from '@/component/Hello'
+import ClassUsage from '@/class-usage'
 // console.log('hello react')s
 //webpack-dev-server打包好的的main.js是放到内存中的，文件家中是看不到的  
 
