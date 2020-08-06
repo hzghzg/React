@@ -1,12 +1,23 @@
+//继承  
+class Lives {
+    constructor(name) {
+        this.name = name
+    }  
+    say() {
+        console.log('这是实例方法')
+    }
+}
+//--------------------------------  
+//class基本使用
 function Person(name) {
     this.name = name
 }
-Person.prototype.say=function(){//直接挂到内存上防止每个对象都创建一次
+Person.prototype.say = function () {//直接挂到内存上防止每个对象都创建一次
     console.log('这是一个实例方法')
 }
 const p1 = new Person('test')
 Person.info = 'aaa'//直接挂载给类的叫做静态属性
-Person.show=function(){//静态方法
+Person.show = function () {//静态方法
     console.log('这是person类的静态方法')
 }
 console.log(p1)
@@ -15,19 +26,19 @@ p1.say()
 Person.show()
 
 //-----------------------------------------------------
-class Animal {
-    constructor(name) {
-        this.name = name
-    }
-    say(){
-        console.log('这是animal的实例方法')
-    }
+//继承
+class Animal extends Lives {
     static info = 'aaa'
-    static show(){
+    static show() {
         console.log('这是animal的静态方法')
     }
 }
-const a1 = new Animal('test')
+const a1 = new Animal('test animal')
 console.log(a1)
-a1.say()  
+a1.say()
 Animal.show()
+class Plant extends Lives {
+}
+const pl1 = new Plant('test plant')
+console.log(pl1)
+pl1.say()
