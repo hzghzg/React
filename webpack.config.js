@@ -12,5 +12,11 @@ module.exports = {
         rules: [
             { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ }
         ]
+    },
+    resolve: {
+        extensions:['.js','.jsx','.json'],//配置导入时省略后缀名,
+        alias:{
+            '@': path.join(__dirname,'./src')
+        }
     }
 }
