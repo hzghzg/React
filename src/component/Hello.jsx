@@ -19,7 +19,12 @@ class Hello extends React.Component {
         //方式一绑定事件：
         // return <h6 className={hellocss.hclass} onClick={this.eventHandler}>This is a react component,{this.state.msg}</h6>
         //方式二绑定事件：
-        return <h6 className={hellocss.hclass} onClick={() => this.eventHandler()}>This is a react component,{this.state.msg}</h6>
+        return <div><h6 className={hellocss.hclass} onClick={() => this.eventHandler()}>This is a react component,{this.state.msg}</h6><input value={this.state.msg} onChange={() => this.stateChange()} ref='txt'></input></div>
+    }
+    stateChange = () => {
+        this.setState({
+            msg: this.refs.txt.value
+        })
     }
     //方式一绑定事件：
     // eventHandler() {
